@@ -62,7 +62,6 @@ services:
           - INSTALL_BLACKFIRE=${INSTALL_BLACKFIRE}
           - TIMEZONE=${PHP_FPM_TIMEZONE}
       volumes:
-        - ./php-fpm/php${PHP_VERSION}.ini:/usr/local/etc/php/php.ini
         - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
       expose:
         - "9000"

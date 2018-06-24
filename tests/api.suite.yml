@@ -1,0 +1,7 @@
+actor: ApiTester
+modules:
+    enabled:
+        - \Helper\Api
+        - Rest:
+          url: http://localhost
+          depends: PhpBrowser

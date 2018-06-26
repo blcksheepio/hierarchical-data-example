@@ -9,7 +9,7 @@ ARG PUID=1000
 ENV PUID ${PUID}
 
 # Update APK
-RUN apk update && apk upgrade 
+RUN apk update && apk upgrade
 
 ###########################################################################
 # Misc. Required Packages: General packages required for building
@@ -22,7 +22,7 @@ RUN apk update \
     && apk add --no-cache --virtual build-dependencies icu-dev libxml2-dev freetype-dev libpng-dev libjpeg-turbo-dev g++ make autoconf \
     && docker-php-source extract && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install -j$(nproc) pdo pgsql pdo_mysql pdo_pgsql intl zip gd
+    && docker-php-ext-install -j$(nproc) pdo pgsql pdo_mysql pdo_pgsql intl zip gd bcmath
 
 ###########################################################################
 # xDebug:

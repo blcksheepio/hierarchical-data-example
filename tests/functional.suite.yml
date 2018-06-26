@@ -3,3 +3,5 @@ suite_namespace: App\Tests\Functional
 modules:
     enabled:
         - \App\Tests\Helper\Functional
+        - Symfony:
+              app_path: 'src'

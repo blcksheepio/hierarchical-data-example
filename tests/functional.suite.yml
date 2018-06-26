@@ -1,7 +1,5 @@
 actor: FunctionalTester
+suite_namespace: App\Tests\Functional
 modules:
     enabled:
-        - \Helper\Functional
-        - Symfony:
-          app_path: 'src'
-          environment: 'test'
+        - \App\Tests\Helper\Functional

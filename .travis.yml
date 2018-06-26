@@ -1,0 +1,24 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+
+services:
+  - docker
+
+before_install:
+  - cp ./env.dist .env
+
+install:
+  - docker-compose up -d nginx
+
+before_script:
+  - docker-compose ps | grep nginx
+  - docker-compose ps | grep php-fpm
+  - docker-compose exec php-fpm composer install
+
+script:
+  - ./vendor/bin/codecept run unit
+  - ./vendor/bin/codecept run functional
+  - ./vendor/bin/codecept run api

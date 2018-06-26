@@ -1,7 +1,6 @@
+
 actor: ApiTester
+suite_namespace: App\Tests\Api
 modules:
     enabled:
-        - \Helper\Api
-        - Rest:
-          url: http://localhost
-          depends: PhpBrowser
+        - \App\Tests\Helper\Api

@@ -1,4 +1,5 @@
 actor: UnitTester
+suite_namespace: App\Tests\Unit
 modules:
     enabled:
-        - \Helper\Unit
+        - \App\Tests\Helper\Unit

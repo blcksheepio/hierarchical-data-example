@@ -76,9 +76,6 @@ services:
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
       depends_on:
-        - postgres
-        - pgadmin
-        - redis
         - neo4j
       networks:
         - backend

@@ -27,6 +27,9 @@ class OrganizationController extends FOSRestController
      */
     public function index()
     {
+
+        $true = 1;
+
         $view = $this->view([], 200);
 
         return $this->handleView($view);

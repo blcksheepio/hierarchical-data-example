@@ -9,6 +9,8 @@ use GraphAware\Neo4j\OGM\Common\Collection;
  * Class Organization
  *
  * @author blcksheep
+ *
+ * @OGM\Node(label="Organization")
  */
 class Organization
 {
@@ -30,7 +32,7 @@ class Organization
      * @var Organization[] | Collection
      * @OGM\Relationship(
      *     type="PARENT",
-     *     direction="OUTGOING",
+     *     direction="INCOMING",
      *     collection=true,
      *     mappedBy="daughters",
      *     targetEntity="Organization"

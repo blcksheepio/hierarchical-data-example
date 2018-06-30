@@ -4,8 +4,8 @@ neo4j:
   connections:
     default:
       scheme: bolt # default (must be either "http" or "bolt")
-      host: localhost # default
-      port: 7474 # optional, will be set to the proper driver's default port if not provided
+      host: neo4j # default
+      port: 7687 # optional, will be set to the proper driver's default port if not provided
       username: neo4j # default
       password: neo4j # default
   clients:

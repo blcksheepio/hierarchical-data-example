@@ -5,3 +5,4 @@ modules:
         - \App\Tests\Helper\Functional
         - Symfony:
               app_path: 'src'
+        - Cli

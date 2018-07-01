@@ -6,6 +6,13 @@ use FOS\RestBundle\Controller\FOSRestController;
 use GraphAware\Neo4j\OGM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class OrganizationController
+ *
+ * @author blcksheep
+ *
+ * @Route("/organization")
+ */
 class OrganizationController extends FOSRestController
 {
     /**
@@ -20,23 +27,5 @@ class OrganizationController extends FOSRestController
     public function __construct(EntityManagerInterface $manager)
     {
         $this->manager = $manager;
-    }
-
-    /**
-     * @Route("/organization", name="organization")
-     */
-    public function index()
-    {
-
-        $true = 1;
-
-        $view = $this->view([], 200);
-
-        return $this->handleView($view);
-    }
-
-    public function post()
-    {
-
     }
 }

@@ -45,6 +45,7 @@ services:
         - PATH=~/.composer/vendor/bin:${PATH}
       depends_on:
         - neo4j
+        - blackfire
       networks:
         - frontend
         - backend

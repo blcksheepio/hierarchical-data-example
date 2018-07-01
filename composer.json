@@ -9,6 +9,7 @@
         "graphaware/neo4j-php-ogm": "^1.0@RC",
         "nelmio/api-doc-bundle": "^3.2",
         "neo4j/neo4j-bundle": "^0.4.1",
+        "sensio/framework-extra-bundle": "^5.2",
         "symfony/asset": "^4.1",
         "symfony/console": "^4.1",
         "symfony/flex": "^1.0",

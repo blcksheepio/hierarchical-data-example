@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use GraphAware\Neo4j\OGM\Annotations as OGM;
 use GraphAware\Neo4j\OGM\Common\Collection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Class Organization
@@ -18,6 +19,7 @@ class Organization
      * @var int
      *
      * @OGM\GraphId()
+     * @Groups({"default"})
      */
     protected $id;
 
@@ -25,6 +27,7 @@ class Organization
      * @var string
      *
      * @OGM\Property(type="string")
+     * @Groups({"default"})
      */
     protected $name;
 
@@ -37,6 +40,7 @@ class Organization
      *     mappedBy="daughters",
      *     targetEntity="Organization"
      * )
+     *
      */
     protected $parents;
 

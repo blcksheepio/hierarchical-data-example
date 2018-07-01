@@ -137,6 +137,9 @@
     "ocramius/proxy-manager": {
         "version": "2.1.1"
     },
+    "pagerfanta/pagerfanta": {
+        "version": "v2.0.1"
+    },
     "phar-io/manifest": {
         "version": "1.0.1"
     },
